@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stormridge House Library - Explore twenty select, handcrafted volumes and rare digital prints.">
+    <title>The Library Archives | Stormridge House Publishing Company</title>
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C0832A' stroke-width='1.5'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E">
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Film Grain Background Overlay -->
+    <div class="grain-overlay"></div>
+    <div class="ambient-glow"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Cinematic Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader-monogram">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,15 L75,30 L75,70 L50,85 L25,70 L25,30 Z" />
+                <path d="M35,45 C35,35 65,35 65,45 C65,55 35,50 35,60 C35,70 65,70 65,60" />
+            </svg>
+        </div>
+        <div class="loader-text">Stormridge House</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="luxury-navbar scrolled" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" id="nav-logo-link">
+                <svg class="nav-logo-icon" style="stroke: var(--color-accent);" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="nav-logo-text">STORMRIDGE</span>
+            </a>
+            
+            <button class="nav-toggle" id="menu-btn" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="library.html" class="nav-link active">Library</a></li>
+                <li><a href="follow.html" class="nav-link">Follow Us</a></li>
+                <li><a href="terms.html" class="nav-link">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Library Header Section -->
+    <header class="editorial-hero">
+        <div class="hero-overlay" style="background: rgba(13, 27, 42, 0.75);"></div>
+        <div class="hero-content">
+            <span class="section-subtitle" style="color: var(--color-accent);">Stormridge Repository</span>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.5rem); margin: 0;">The Library</h1>
+            <p class="hero-subtitle" style="font-size: 1.1rem; color: var(--color-bg);">Browse through our select catalog of premium architectural and literary volumes.</p>
+        </div>
+    </header>
+
+    <!-- Digital Library Showcase Section -->
+    <section class="library-section" id="library-section" style="padding-top: 60px;">
+        <!-- Real-Time Search UI -->
+        <div class="search-container fade-reveal">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" id="library-search" class="search-input" placeholder="SEARCH FOR TIMELINESS IN THE ARCHIVES...">
+            </div>
+        </div>
+
+        <!-- 20 Books Grid -->
+        <div class="books-grid">
+            
+            <!-- Book 1 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #3D0C11; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Clockwork Library</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8" />
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                            </svg>
+                            <div class="svg-cover-author">Alistair Vance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Alistair Vance</span>
+                    <h3 class="book-card-title">The Clockwork Library</h3>
+                    <p class="book-card-desc">An exploration of a mechanical archive where brass gears catalog the infinite secrets of human history.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 2 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0F2537; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Scribe of Alexandria</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <div class="svg-cover-author">Philip Vance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Philip Vance</span>
+                    <h3 class="book-card-title">The Scribe of Alexandria</h3>
+                    <p class="book-card-desc">Chronicles of a single calligrapher attempting to copy the world's knowledge before fire consumes the scrolls.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 3 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0F301B; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Whispering Archives</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+                                <path d="M8 12h8" />
+                            </svg>
+                            <div class="svg-cover-author">Franklin Croft</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Franklin Croft</span>
+                    <h3 class="book-card-title">The Whispering Archives</h3>
+                    <p class="book-card-desc">An antique-collector discovers rare manuscripts that murmur lost fragments of poetry when left in darkness.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 4 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #2F1735; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Obsidian Tower</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2L2 22h20L12 2z" />
+                                <line x1="12" y1="10" x2="12" y2="18" />
+                            </svg>
+                            <div class="svg-cover-author">Theresa Vance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Theresa Vance</span>
+                    <h3 class="book-card-title">The Obsidian Tower</h3>
+                    <p class="book-card-desc">An epic fantasy masterpiece describing a library locked in a volcanic monument at the end of the world.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 5 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #422D16; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Cartographer's Shadow</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                            <div class="svg-cover-author">Charles Stormridge</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Charles Stormridge</span>
+                    <h3 class="book-card-title">The Cartographer's Shadow</h3>
+                    <p class="book-card-desc">A deep narrative on mapping unexplored regions and the cartographers who intentionally hid mythical gates.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 6 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #111A1B; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Labyrinths of the Mind</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <div class="svg-cover-author">Dr. Eleanor Vance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Dr. Eleanor Vance</span>
+                    <h3 class="book-card-title">Labyrinths of the Mind</h3>
+                    <p class="book-card-desc">A psychological and philosophical treatise evaluating the maze dream archetype in early civil records.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 7 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #4A1D0E; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Echoes of Amber and Ash</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z" />
+                                <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+                            </svg>
+                            <div class="svg-cover-author">Beatrice Thorne</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Beatrice Thorne</span>
+                    <h3 class="book-card-title">Echoes of Amber &amp; Ash</h3>
+                    <p class="book-card-desc">A collection of luxury prose outlining the fall of forgotten royal houses across medieval Europe.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 8 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #350F21; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Midnight in Montenegro</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2v20M2 12h20"/>
+                            </svg>
+                            <div class="svg-cover-author">Genevieve Moreau</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Genevieve Moreau</span>
+                    <h3 class="book-card-title">Midnight in Montenegro</h3>
+                    <p class="book-card-desc">Gothic suspense romance highlighting secrets kept within a remote mountaintop estate during dark winters.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 9 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0F142D; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Crimson Astrolabe</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="6" />
+                                <path d="M12 2l4 4-4 4-4-4 4-4z" />
+                            </svg>
+                            <div class="svg-cover-author">Isabella Rossi</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Isabella Rossi</span>
+                    <h3 class="book-card-title">The Crimson Astrolabe</h3>
+                    <p class="book-card-desc">A fast-paced astronomical conspiracy tracing an alignment ledger that reveals lost landmasses.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 10 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #2D0F0A; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Beneath the Floorboards</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M3 12h18M3 6h18M3 18h18" />
+                            </svg>
+                            <div class="svg-cover-author">Julian Blackwood</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Julian Blackwood</span>
+                    <h3 class="book-card-title">Beneath the Floorboards</h3>
+                    <p class="book-card-desc">Atmospheric horror centered around a grand country library holding phantom archives beneath the floor planks.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 11 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0E2919; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Ink Weaver's Daughter</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                            <div class="svg-cover-author">Leo Martinez</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Leo Martinez</span>
+                    <h3 class="book-card-title">The Ink Weaver's Daughter</h3>
+                    <p class="book-card-desc">A fantasy fable recounting ink guilds who possessed the talent to materialize written stories into physical life.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 12 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #242426; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Shadows of the Guildhall</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <div class="svg-cover-author">Margaret Sterling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Margaret Sterling</span>
+                    <h3 class="book-card-title">Shadows of the Guildhall</h3>
+                    <p class="book-card-desc">A intricate Victorian thriller detailing the secret cabals operating printing presses underneath London docks.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 13 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #3C220E; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Last Alchemist</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2v20M17 5H7M19 12H5M17 19H7"/>
+                            </svg>
+                            <div class="svg-cover-author">Nathaniel Crane</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Nathaniel Crane</span>
+                    <h3 class="book-card-title">The Last Alchemist of Prague</h3>
+                    <p class="book-card-desc">Historical drama recounting an alchemist who encoded dynamic chemical formulas into luxury paperbindings.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 14 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #2E1B3A; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Rooms Without Walls</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="9" y1="3" x2="9" y2="21"/>
+                            </svg>
+                            <div class="svg-cover-author">Olivia Sterling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Olivia Sterling</span>
+                    <h3 class="book-card-title">Rooms Without Walls</h3>
+                    <p class="book-card-desc">An elegant surrealist anthology exploring empty architectural galleries and dreams of floating papers.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 15 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #4A2B0E; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Gilded Mirrors</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 12a4 4 0 0 1 8 0"/>
+                            </svg>
+                            <div class="svg-cover-author">Quintin Bell</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Quintin Bell</span>
+                    <h3 class="book-card-title">Gilded Mirrors</h3>
+                    <p class="book-card-desc">A modern high-society thriller focused on a publishing house that blackmails elites via private print diaries.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 16 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0E292E; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">The Solitary Lighthouse</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2L2 22h20L12 2z"/>
+                                <circle cx="12" cy="13" r="3"/>
+                            </svg>
+                            <div class="svg-cover-author">Rosalind Thorne</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Rosalind Thorne</span>
+                    <h3 class="book-card-title">The Solitary Lighthouse</h3>
+                    <p class="book-card-desc">A poetic examination of isolation, tracking logs left by lightkeepers along the stormy northern coasts.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 17 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #380E2B; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Threads of the Fates</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                            </svg>
+                            <div class="svg-cover-author">Silas Ward</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Silas Ward</span>
+                    <h3 class="book-card-title">Threads of the Fates</h3>
+                    <p class="book-card-desc">Mythic retellings highlighting spinners who weave historical timelines into delicate gold thread covers.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 18 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #121E29; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Ghosts of the Press</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M4 4h16v16H4zM4 9h16M4 15h16"/>
+                            </svg>
+                            <div class="svg-cover-author">Victor Sterling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Victor Sterling</span>
+                    <h3 class="book-card-title">Ghosts of the Printing Press</h3>
+                    <p class="book-card-desc">A non-fiction historical tracking of early Gutenberg presses and the legends of printers who disappeared.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 19 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #331A14; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Letters from the Abyss</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            <div class="svg-cover-author">Katherine Ward</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Katherine Ward</span>
+                    <h3 class="book-card-title">Letters from the Abyss</h3>
+                    <p class="book-card-desc">An epistolary dark romance between two archivists separated by dimensions inside a folding bookshelf room.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 20 -->
+            <article class="book-card">
+                <div class="book-cover-wrap">
+                    <div class="book-cover-image">
+                        <div class="svg-cover" style="background-color: #0E1815; border-color: #C0832A;">
+                            <div class="svg-cover-spine"></div>
+                            <div class="svg-cover-title">Chronicles of the Gate</div>
+                            <svg class="svg-cover-pattern" viewBox="0 0 24 24">
+                                <path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            </svg>
+                            <div class="svg-cover-author">Hamilton Reed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-details">
+                    <span class="book-card-author">Hamilton Reed</span>
+                    <h3 class="book-card-title">Chronicles of the Iron Gate</h3>
+                    <p class="book-card-desc">Stories detailing families sworn to guard the secret library vaults of Stormridge House since 1892.</p>
+                    <div class="book-card-actions">
+                        <a href="#" class="btn-luxury">Read Now</a>
+                        <a href="#" class="btn-secondary">PDF</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Luxury Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <svg class="nav-logo-icon" style="stroke: var(--color-accent);" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span class="footer-logo-text">STORMRIDGE</span>
+                </a>
+                <p class="footer-desc">Stormridge House Publishing Company drafts narratives built to withstand centuries. Handcrafted designs, historical research, and elite digital literature.</p>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="library.html" class="footer-link">Library</a></li>
+                    <li><a href="follow.html" class="footer-link">Follow Us</a></li>
+                    <li><a href="terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="follow.html" class="footer-link">Instagram</a></li>
+                    <li><a href="follow.html" class="footer-link">X/Twitter</a></li>
+                    <li><a href="follow.html" class="footer-link">WhatsApp</a></li>
+                    <li><a href="follow.html" class="footer-link">YouTube</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Receive Archives</h4>
+                <p class="footer-desc" style="margin-bottom: 8px;">Subscribe to receive rare digital drafts, catalog logs, and announcements.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="ENTER EMAIL ADDRESS..." required aria-label="Email address for newsletter">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-divider-container">
+            <div class="footer-divider"></div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stormridge House Publishing Company. All rights reserved.</p>
+            <p class="editorial-serif">Stories That Outlive Time.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Import -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stormridge House Publishing Company - Timeless literature, cinematic archives, and luxury digital publishing. Stories that outlive time.">
+    <title>Stormridge House Publishing Company | Stories That Outlive Time</title>
+    <!-- FAVICON: Replace href with your favicon image path -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="grain-overlay"></div>
+    <div class="ambient-glow"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Cinematic Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader-monogram">
+            <svg viewBox="0 0 100 100">
+                <path d="M50,15 L75,30 L75,70 L50,85 L25,70 L25,30 Z" />
+                <path d="M35,45 C35,35 65,35 65,45 C65,55 35,50 35,60 C35,70 65,70 65,60" />
+            </svg>
+        </div>
+        <div class="loader-text">Stormridge House</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+
+    <!-- Sticky Navbar (shared) -->
+    <nav class="luxury-navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" data-page="page-home">
+                <!-- LOGO: Replace src with your logo image (e.g. images/logo.png) -->
+                <img src="images/logo.png" alt="Stormridge" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <svg class="nav-logo-icon" viewBox="0 0 24 24" style="display:none">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="nav-logo-text">STORMRIDGE</span>
+            </a>
+            <button class="nav-toggle" id="menu-btn" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-page="page-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-page="page-about">About Us</a></li>
+                <li><a href="#library" class="nav-link" data-page="page-library">Library</a></li>
+                <li><a href="#follow" class="nav-link" data-page="page-follow">Follow Us</a></li>
+                <li><a href="#terms" class="nav-link" data-page="page-terms">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===================== PAGE: HOME ===================== -->
+    <section class="page-section active" id="page-home">
+        <header class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-background-texture"></div>
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+            <div class="hero-content">
+                <!-- HERO LOGO: Replace src with your logo image -->
+                <img src="images/logo.png" alt="Stormridge House" class="hero-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <svg class="hero-logo-placeholder" viewBox="0 0 100 100" style="display:none">
+                    <circle cx="50" cy="50" r="45"/><path d="M50,15 L50,85 M15,50 L85,50 M32,32 L68,68 M32,68 L68,32"/><circle cx="50" cy="50" r="15" fill="#0D1B2A"/>
+                </svg>
+                <h1 class="hero-title">Stormridge House</h1>
+                <p class="hero-subtitle">Stories That Outlive Time.</p>
+                <div class="hero-btn-container">
+                    <a href="#library" class="btn-luxury" data-page="page-library">Explore Library</a>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator"><span>Scroll</span><div class="scroll-indicator-line"></div></div>
+        </header>
+
+        <!-- Labyrinth Corridor -->
+        <section class="labyrinth-section" id="labyrinth-section">
+            <div class="labyrinth-grid-overlay"></div>
+            <div class="labyrinth-container">
+                <div class="section-header fade-reveal">
+                    <span class="section-subtitle">Interactive Corridor</span>
+                    <h2 class="section-title">The Labyrinth of Stories</h2>
+                    <p class="section-description">A maze-like path through our forgotten archive rooms. Can you navigate to the deepest vault?</p>
+                </div>
+                <div class="labyrinth-card fade-reveal">
+                    <div id="maze-icon-container"></div>
+                    <h3 id="maze-title" class="labyrinth-room-title">The Vault Entrance</h3>
+                    <p id="maze-desc" class="labyrinth-room-desc">Loading archives...</p>
+                    <div id="maze-options" class="labyrinth-options"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ===================== PAGE: ABOUT ===================== -->
+    <section class="page-section" id="page-about">
+        <header class="editorial-hero">
+            <div class="hero-overlay" style="background:rgba(13,27,42,0.75)"></div>
+            <div class="hero-content">
+                <span class="section-subtitle" style="color:var(--color-accent)">Established 1892</span>
+                <h1 class="hero-title" style="font-size:clamp(2rem,4vw,3.5rem);margin:0">Our Heritage</h1>
+                <p class="hero-subtitle" style="font-size:1.1rem;color:var(--color-bg)">Preserving the art of visual writing and physical binder craftsmanship.</p>
+            </div>
+        </header>
+        <main class="editorial-container">
+            <section class="editorial-row fade-reveal">
+                <div class="editorial-image-wrap">
+                    <div class="editorial-image-placeholder">
+                        <!-- ABOUT IMAGE 1: Replace with <img src="images/about-philosophy.jpg" alt="Philosophy"> -->
+                        <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                </div>
+                <div class="editorial-text-wrap">
+                    <span class="editorial-label">Our Philosophy</span>
+                    <h2 class="editorial-title">To Craft Words That Echo in the Halls of Time</h2>
+                    <p class="editorial-desc">We believe literature is more than text; it is an artifact of human thought. Each manuscript published at Stormridge House goes through months of typography, illustration refinement, and design calibration.</p>
+                    <p>We work exclusively with authors who dare to explore deep mysteries, architectural histories, and philosophical realms. Every page must carry weight, texture, and lasting value.</p>
+                </div>
+            </section>
+            <section class="editorial-row reverse fade-reveal">
+                <div class="editorial-image-wrap">
+                    <div class="editorial-image-placeholder">
+                        <!-- ABOUT IMAGE 2: Replace with <img src="images/about-founder.jpg" alt="Founder"> -->
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                    </div>
+                </div>
+                <div class="editorial-text-wrap">
+                    <span class="editorial-label">A Letter from the Founder</span>
+                    <h2 class="editorial-title">A Sanctuary for Independent Ideas</h2>
+                    <p class="editorial-desc">"In a world accelerating towards instant, forgettable consumption, we stand firm in our devotion to the slow, heavy, and profound."</p>
+                    <p>Stormridge House was established in a misty coastal estate because contemplation requires silence. We invite readers to get lost inside our library corridors and discover stories that outlive the transient trends of the modern web.</p>
+                    <p class="editorial-serif" style="margin-top:24px;font-weight:600;color:var(--color-accent);font-size:1.2rem">— Charles Stormridge, Founder</p>
+                </div>
+            </section>
+        </main>
+        <section class="timeline-section">
+            <div class="section-header fade-reveal">
+                <span class="section-subtitle">The Chronology</span>
+                <h2 class="section-title">Timeline of Crafts</h2>
+                <p class="section-description">How our mountain archive evolved from a private collection into a world-class publishing house.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-item left fade-reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">1892</div><h3 class="timeline-title">The Foundation</h3><p>Charles Stormridge constructs the first vault library inside the Stormridge stone manor, archiving maps and philosophical treatises.</p></div></div>
+                <div class="timeline-item right fade-reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">1924</div><h3 class="timeline-title">Astronomical Expansion</h3><p>Collaborating with astronomers, the house designs the Astrolabe Room, publishing limited constellation folios using hand-mixed gold ink.</p></div></div>
+                <div class="timeline-item left fade-reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">1955</div><h3 class="timeline-title">The Master Guilds</h3><p>Stormridge forms a guild of artisanal binders, adopting heavy linen bindings and hand-sewn spines as a benchmark for every release.</p></div></div>
+                <div class="timeline-item right fade-reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">1998</div><h3 class="timeline-title">Digital Heritage Preservation</h3><p>Recognizing the shifts in technology, the house launches the Archive Project, scanning fragile manuscripts with custom high-fidelity systems.</p></div></div>
+                <div class="timeline-item left fade-reveal"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2026</div><h3 class="timeline-title">The Digital Labyrinth</h3><p>Unveiling the new digital portal experience, making our elite handcrafted library accessible to collectors globally without losing visual majesty.</p></div></div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ===================== PAGE: LIBRARY ===================== -->
+    <section class="page-section" id="page-library">
+        <header class="editorial-hero">
+            <div class="hero-overlay" style="background:rgba(13,27,42,0.75)"></div>
+            <div class="hero-content">
+                <span class="section-subtitle" style="color:var(--color-accent)">Stormridge Repository</span>
+                <h1 class="hero-title" style="font-size:clamp(2rem,4vw,3.5rem);margin:0">The Library</h1>
+                <p class="hero-subtitle" style="font-size:1.1rem;color:var(--color-bg)">Browse through our select catalog of premium architectural and literary volumes.</p>
+            </div>
+        </header>
+        <div class="library-section" style="padding-top:60px">
+            <div class="search-container fade-reveal">
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="library-search" class="search-input" placeholder="SEARCH THE ARCHIVES...">
+                </div>
+            </div>
+            <div class="books-grid">
+
+                <!-- ===== BOOK 01 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <!-- COVER IMAGE: Replace src with your cover (e.g. images/covers/book-01.jpg) -->
+                        <img src="images/covers/book-01.jpg" alt="The Clockwork Library" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#3D0C11"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Clockwork Library</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><div class="svg-cover-author">Alistair Vance</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Alistair Vance</span>
+                        <h3 class="book-card-title">The Clockwork Library</h3>
+                        <p class="book-card-desc">An exploration of a mechanical archive where brass gears catalog the infinite secrets of human history.</p>
+                        <div class="book-card-actions">
+                            <a href="#" class="btn-luxury">Read Now</a>
+                            <!-- PDF LINK: Replace href with your PDF path -->
+                            <a href="pdfs/book-01.pdf" class="btn-secondary" target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 02 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-02.jpg" alt="The Scribe of Alexandria" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0F2537"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Scribe of Alexandria</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="svg-cover-author">Philip Vance</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Philip Vance</span>
+                        <h3 class="book-card-title">The Scribe of Alexandria</h3>
+                        <p class="book-card-desc">Chronicles of a single calligrapher attempting to copy the world's knowledge before fire consumes the scrolls.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-02.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 03 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-03.jpg" alt="The Whispering Archives" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0F301B"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Whispering Archives</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg><div class="svg-cover-author">Franklin Croft</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Franklin Croft</span>
+                        <h3 class="book-card-title">The Whispering Archives</h3>
+                        <p class="book-card-desc">An antique-collector discovers rare manuscripts that murmur lost fragments of poetry when left in darkness.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-03.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 04 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-04.jpg" alt="The Obsidian Tower" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#2F1735"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Obsidian Tower</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/><line x1="12" y1="10" x2="12" y2="18"/></svg><div class="svg-cover-author">Theresa Vance</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Theresa Vance</span>
+                        <h3 class="book-card-title">The Obsidian Tower</h3>
+                        <p class="book-card-desc">An epic fantasy masterpiece describing a library locked in a volcanic monument at the end of the world.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-04.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 05 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-05.jpg" alt="The Cartographer's Shadow" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#422D16"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Cartographer's Shadow</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><div class="svg-cover-author">Charles Stormridge</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Charles Stormridge</span>
+                        <h3 class="book-card-title">The Cartographer's Shadow</h3>
+                        <p class="book-card-desc">A deep narrative on mapping unexplored regions and the cartographers who intentionally hid mythical gates.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-05.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 06 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-06.jpg" alt="Labyrinths of the Mind" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#111A1B"><div class="svg-cover-spine"></div><div class="svg-cover-title">Labyrinths of the Mind</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><div class="svg-cover-author">Dr. Eleanor Vance</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Dr. Eleanor Vance</span>
+                        <h3 class="book-card-title">Labyrinths of the Mind</h3>
+                        <p class="book-card-desc">A psychological and philosophical treatise evaluating the maze dream archetype in early civil records.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-06.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 07 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-07.jpg" alt="Echoes of Amber and Ash" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#4A1D0E"><div class="svg-cover-spine"></div><div class="svg-cover-title">Echoes of Amber and Ash</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/></svg><div class="svg-cover-author">Beatrice Thorne</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Beatrice Thorne</span>
+                        <h3 class="book-card-title">Echoes of Amber &amp; Ash</h3>
+                        <p class="book-card-desc">A collection of luxury prose outlining the fall of forgotten royal houses across medieval Europe.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-07.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 08 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-08.jpg" alt="Midnight in Montenegro" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#350F21"><div class="svg-cover-spine"></div><div class="svg-cover-title">Midnight in Montenegro</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg><div class="svg-cover-author">Genevieve Moreau</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Genevieve Moreau</span>
+                        <h3 class="book-card-title">Midnight in Montenegro</h3>
+                        <p class="book-card-desc">Gothic suspense romance highlighting secrets kept within a remote mountaintop estate during dark winters.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-08.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 09 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-09.jpg" alt="The Crimson Astrolabe" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0F142D"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Crimson Astrolabe</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><path d="M12 2l4 4-4 4-4-4 4-4z"/></svg><div class="svg-cover-author">Isabella Rossi</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Isabella Rossi</span>
+                        <h3 class="book-card-title">The Crimson Astrolabe</h3>
+                        <p class="book-card-desc">A fast-paced astronomical conspiracy tracing an alignment ledger that reveals lost landmasses.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-09.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 10 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-10.jpg" alt="Beneath the Floorboards" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#2D0F0A"><div class="svg-cover-spine"></div><div class="svg-cover-title">Beneath the Floorboards</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg><div class="svg-cover-author">Julian Blackwood</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Julian Blackwood</span>
+                        <h3 class="book-card-title">Beneath the Floorboards</h3>
+                        <p class="book-card-desc">Atmospheric horror centered around a grand country library holding phantom archives beneath the floor planks.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-10.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 11 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-11.jpg" alt="The Ink Weaver's Daughter" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0E2919"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Ink Weaver's Daughter</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg><div class="svg-cover-author">Leo Martinez</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Leo Martinez</span>
+                        <h3 class="book-card-title">The Ink Weaver's Daughter</h3>
+                        <p class="book-card-desc">A fantasy fable recounting ink guilds who possessed the talent to materialize written stories into physical life.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-11.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 12 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-12.jpg" alt="Shadows of the Guildhall" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#242426"><div class="svg-cover-spine"></div><div class="svg-cover-title">Shadows of the Guildhall</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div class="svg-cover-author">Margaret Sterling</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Margaret Sterling</span>
+                        <h3 class="book-card-title">Shadows of the Guildhall</h3>
+                        <p class="book-card-desc">An intricate Victorian thriller detailing the secret cabals operating printing presses underneath London docks.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-12.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 13 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-13.jpg" alt="The Last Alchemist" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#3C220E"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Last Alchemist</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2v20M17 5H7M19 12H5M17 19H7"/></svg><div class="svg-cover-author">Nathaniel Crane</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Nathaniel Crane</span>
+                        <h3 class="book-card-title">The Last Alchemist of Prague</h3>
+                        <p class="book-card-desc">Historical drama recounting an alchemist who encoded dynamic chemical formulas into luxury paperbindings.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-13.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 14 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-14.jpg" alt="Rooms Without Walls" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#2E1B3A"><div class="svg-cover-spine"></div><div class="svg-cover-title">Rooms Without Walls</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg><div class="svg-cover-author">Olivia Sterling</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Olivia Sterling</span>
+                        <h3 class="book-card-title">Rooms Without Walls</h3>
+                        <p class="book-card-desc">An elegant surrealist anthology exploring empty architectural galleries and dreams of floating papers.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-14.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 15 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-15.jpg" alt="Gilded Mirrors" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#4A2B0E"><div class="svg-cover-spine"></div><div class="svg-cover-title">Gilded Mirrors</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 0 1 8 0"/></svg><div class="svg-cover-author">Quintin Bell</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Quintin Bell</span>
+                        <h3 class="book-card-title">Gilded Mirrors</h3>
+                        <p class="book-card-desc">A modern high-society thriller focused on a publishing house that blackmails elites via private print diaries.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-15.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 16 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-16.jpg" alt="The Solitary Lighthouse" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0E292E"><div class="svg-cover-spine"></div><div class="svg-cover-title">The Solitary Lighthouse</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/><circle cx="12" cy="13" r="3"/></svg><div class="svg-cover-author">Rosalind Thorne</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Rosalind Thorne</span>
+                        <h3 class="book-card-title">The Solitary Lighthouse</h3>
+                        <p class="book-card-desc">A poetic examination of isolation, tracking logs left by lightkeepers along the stormy northern coasts.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-16.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 17 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-17.jpg" alt="Threads of the Fates" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#380E2B"><div class="svg-cover-spine"></div><div class="svg-cover-title">Threads of the Fates</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg><div class="svg-cover-author">Silas Ward</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Silas Ward</span>
+                        <h3 class="book-card-title">Threads of the Fates</h3>
+                        <p class="book-card-desc">Mythic retellings highlighting spinners who weave historical timelines into delicate gold thread covers.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-17.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 18 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-18.jpg" alt="Ghosts of the Press" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#121E29"><div class="svg-cover-spine"></div><div class="svg-cover-title">Ghosts of the Press</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M4 15h16"/></svg><div class="svg-cover-author">Victor Sterling</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Victor Sterling</span>
+                        <h3 class="book-card-title">Ghosts of the Printing Press</h3>
+                        <p class="book-card-desc">A non-fiction historical tracking of early Gutenberg presses and the legends of printers who disappeared.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-18.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 19 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-19.jpg" alt="Letters from the Abyss" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#331A14"><div class="svg-cover-spine"></div><div class="svg-cover-title">Letters from the Abyss</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><div class="svg-cover-author">Katherine Ward</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Katherine Ward</span>
+                        <h3 class="book-card-title">Letters from the Abyss</h3>
+                        <p class="book-card-desc">An epistolary dark romance between two archivists separated by dimensions inside a folding bookshelf room.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-19.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+                <!-- ===== BOOK 20 ===== -->
+                <article class="book-card">
+                    <div class="book-cover-wrap"><div class="book-cover-image">
+                        <img src="images/covers/book-20.jpg" alt="Chronicles of the Gate" class="cover-img" onerror="this.style.display='none'">
+                        <div class="svg-cover" style="background-color:#0E1815"><div class="svg-cover-spine"></div><div class="svg-cover-title">Chronicles of the Gate</div><svg class="svg-cover-pattern" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0 0 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg><div class="svg-cover-author">Hamilton Reed</div></div>
+                    </div></div>
+                    <div class="book-details">
+                        <span class="book-card-author">Hamilton Reed</span>
+                        <h3 class="book-card-title">Chronicles of the Iron Gate</h3>
+                        <p class="book-card-desc">Stories detailing families sworn to guard the secret library vaults of Stormridge House since 1892.</p>
+                        <div class="book-card-actions"><a href="#" class="btn-luxury">Read Now</a><a href="pdfs/book-20.pdf" class="btn-secondary" target="_blank">PDF</a></div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PAGE: FOLLOW ===================== -->
+    <section class="page-section" id="page-follow">
+        <header class="editorial-hero">
+            <div class="hero-overlay" style="background:rgba(13,27,42,0.75)"></div>
+            <div class="hero-content">
+                <span class="section-subtitle" style="color:var(--color-accent)">Join The Community</span>
+                <h1 class="hero-title" style="font-size:clamp(2rem,4vw,3.5rem);margin:0">Connect With Us</h1>
+                <p class="hero-subtitle" style="font-size:1.1rem;color:var(--color-bg)">Step inside our digital circles for stories, prints, and exclusive previews.</p>
+            </div>
+        </header>
+        <main class="follow-section">
+            <div class="section-header fade-reveal">
+                <span class="section-subtitle">Digital Portals</span>
+                <h2 class="section-title">Follow the Vaults</h2>
+                <p class="section-description">We publish updates across platforms. Tap to open the gateways.</p>
+            </div>
+            <div class="socials-grid fade-reveal">
+                <!-- SOCIAL LINK: Replace href with your Instagram URL -->
+                <a href="#" class="social-card" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon-wrap"><svg class="social-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg></div>
+                    <h3 class="social-name">Instagram</h3><span class="social-handle">@stormridgehouse</span>
+                </a>
+                <!-- SOCIAL LINK: Replace href with your X/Twitter URL -->
+                <a href="#" class="social-card" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon-wrap"><svg class="social-icon" viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg></div>
+                    <h3 class="social-name">X / Twitter</h3><span class="social-handle">@stormridgebooks</span>
+                </a>
+                <!-- SOCIAL LINK: Replace href with your WhatsApp URL -->
+                <a href="#" class="social-card" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon-wrap"><svg class="social-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                    <h3 class="social-name">WhatsApp</h3><span class="social-handle">Stormridge Archives</span>
+                </a>
+                <!-- SOCIAL LINK: Replace href with your YouTube URL -->
+                <a href="#" class="social-card" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon-wrap"><svg class="social-icon" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></div>
+                    <h3 class="social-name">YouTube</h3><span class="social-handle">Stormridge Cinema</span>
+                </a>
+                <!-- SOCIAL LINK: Replace href with your Email -->
+                <a href="mailto:archives@stormridgehouse.com" class="social-card">
+                    <div class="social-icon-wrap"><svg class="social-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <h3 class="social-name">Email</h3><span class="social-handle">archives@stormridge.com</span>
+                </a>
+            </div>
+        </main>
+    </section>
+
+    <!-- ===================== PAGE: TERMS ===================== -->
+    <section class="page-section" id="page-terms">
+        <main class="legal-section">
+            <div class="legal-container fade-reveal">
+                <div class="legal-header">
+                    <h1 style="color:var(--color-primary);font-family:var(--font-heading);font-size:1.8rem;letter-spacing:0.1em">Terms &amp; Conditions</h1>
+                    <div class="legal-date">Last Updated: May 2026</div>
+                </div>
+                <div class="legal-block"><h3>1. Accessing the Archives</h3><p>Welcome to the digital portals of Stormridge House Publishing Company ("Stormridge House"). By entering our interactive archive corridors, navigating our digital bookshelf, and reading our materials, you agree to comply with the terms and legal parameters outlined below.</p><p>Our website is designed as a literary experience and is intended for individuals who appreciate fine literature, art bindings, and editorial typography.</p></div>
+                <div class="legal-block"><h3>2. Intellectual Property &amp; Reserved Materials</h3><p>The books, custom vector cover designs, illustrations, leather-bound CSS structures, historical logs, storytelling game parameters, typography ratios, and code contained herein are the proprietary intellectual property of Stormridge House.</p>
+                    <div class="legal-accent-box">"All books, content, covers, and digital materials are copyrighted and fully reserved by Stormridge House Publishing Company."</div>
+                    <p>No user is authorized to reprint, distribute, scrape, or modify any files of our publications without receiving explicit written consent from the directors of Stormridge House.</p></div>
+                <div class="legal-block"><h3>3. Reading Restrictions &amp; Usage Policies</h3><p>The reading materials offered through our portal are intended for individual educational and entertainment usage. You agree to use the portal in a manner that does not degrade, slow down, or damage our server networks.</p><p>Our labyrinth room explorer game is a fictional narrative device and contains fictional codes and secrets. Sharing vault passwords or codes in forums is allowed, but commercial exploitation of the game rules is strictly prohibited.</p></div>
+                <div class="legal-block"><h3>4. Digital Rights &amp; Limitations</h3><p>We work to ensure all metadata, author histories, and astronomical timelines are accurate representations of our published catalogs. However, historical logs are written under literary editorial perspectives.</p><p>Stormridge House reserves the right to modify, rotate, or pull down books from the digital archives without prior notification to the community.</p></div>
+                <div class="legal-block"><h3>5. Contact Information</h3><p>For questions regarding print rights, leather binder purchases, astronomical reprints, or licensing of our authors' titles, please reach out via our <a href="#follow" data-page="page-follow" style="color:var(--color-accent);text-decoration:none;font-weight:500">Follow Page</a>.</p></div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Shared Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo" data-page="page-home">
+                    <img src="images/logo.png" alt="Stormridge" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:40px;height:40px">
+                    <svg class="nav-logo-icon" style="stroke:var(--color-accent);display:none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="footer-logo-text">STORMRIDGE</span>
+                </a>
+                <p class="footer-desc">Stormridge House Publishing Company drafts narratives built to withstand centuries. Handcrafted designs, historical research, and elite digital literature.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" class="footer-link" data-page="page-home">Home</a></li>
+                    <li><a href="#about" class="footer-link" data-page="page-about">About Us</a></li>
+                    <li><a href="#library" class="footer-link" data-page="page-library">Library</a></li>
+                    <li><a href="#follow" class="footer-link" data-page="page-follow">Follow Us</a></li>
+                    <li><a href="#terms" class="footer-link" data-page="page-terms">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="#follow" class="footer-link" data-page="page-follow">Instagram</a></li>
+                    <li><a href="#follow" class="footer-link" data-page="page-follow">X/Twitter</a></li>
+                    <li><a href="#follow" class="footer-link" data-page="page-follow">WhatsApp</a></li>
+                    <li><a href="#follow" class="footer-link" data-page="page-follow">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Receive Archives</h4>
+                <p class="footer-desc" style="margin-bottom:8px">Subscribe to receive rare digital drafts, catalog logs, and announcements.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="ENTER EMAIL ADDRESS..." required aria-label="Email address for newsletter">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-divider-container"><div class="footer-divider"></div></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Stormridge House Publishing Company. All rights reserved.</p>
+            <p class="editorial-serif">Stories That Outlive Time.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
